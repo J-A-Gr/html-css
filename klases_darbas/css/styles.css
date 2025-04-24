@@ -1,0 +1,297 @@
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  background: linear-gradient(-45deg, #ee7752, #3807eb, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  border: 1px solid black;
+  padding: 10px 5px;
+  border-radius: 10px;
+}
+
+.nav-list li:hover {
+  background-color: rgb(117, 117, 219);
+  transform: translateY(-4px);
+  transition: all 0.3s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+}
+
+.block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-block img {
+  width: 700px; /* Adjust as needed */
+  height: 300px;
+  border-radius: 10px;
+  border: 3px solid white;
+}
+
+.image-block-about {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.image-block-about img {
+  width: 750px; /* Adjust as needed */
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid white;
+}
+
+.text-block h4 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.text-block p {
+  margin: 10px 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Push logo left, nav right */
+  align-items: center; /* Keep both vertically centered */
+  flex-wrap: wrap;
+  padding: 10px 40px;
+  border-bottom: 2px solid white;
+  background: transparent; /* remove separate background if any */
+}
+
+/* This makes the whole body at least as tall as the viewport */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(-45deg, #ee7752, #3807eb, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Main content should take up all available space */
+main {
+  flex: 1;
+}
+
+/* Footer stays at the bottom */
+footer {
+  text-align: right;
+  padding-right: 20px;
+}
+
+section {
+  text-align: center;
+}
+
+/* Responsive: stack blocks on small screens */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .block {
+    width: 80%;
+  }
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between logo and text */
+}
+
+.logo {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  color: white;
+}
+
+.highlight-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.highlight-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px 60px;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  z-index: 2;
+}
+
+.highlight-curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+}
+
+.contact-form {
+  max-height: 500px; /* Try matching the image height */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.contact-form input,
+.contact-form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.contact-form input {
+  border: 1px solid white;
+}
+
+.contact-form button {
+  background-color: #66a6ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #4f8ee4;
+}
+
+.contact-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.three-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.column {
+  flex: 1;
+}
+
+.text-blocks p {
+  text-align: left;
+}
+
+.two-rows-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.left,
+.right {
+  flex: 1;
+}
+
+.text-block-contact {
+  list-style-position: inside; /* Moves bullets inside the text block */
+  text-align: left; /* Aligns the text to the left */
+  max-width: 600px; /* Optional: limit the width for better readability */
+  margin: 0 auto; /* Center the whole list block itself */
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.right img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.left h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.left p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.row-contact {
+  display: flex;
+  justify-content: space-between; /* Keeps image on right, form on right */
+  align-items: center; /* ← THIS makes vertical center alignment */
+  gap: 60px;
+  margin-bottom: 60px;
+}
